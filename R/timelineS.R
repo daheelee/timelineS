@@ -50,7 +50,7 @@
 #' label.direction = "up", label.length = c(0.2,0.8,0.4,1.2), label.position = 3,
 #' line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 #' @author Dahee Lee
-#' @seealso \code{\link{axis.Date}} \code{\link{timelineG}} \code{\link{durCalc}} \code{\link{durPlot}}
+#' @seealso \code{\link{axis.Date}}, \code{\link{timelineG}}, \code{\link{durCalc}}, \code{\link{durPlot}}
 #' @import graphics
 #' @export
 

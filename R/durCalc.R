@@ -1,4 +1,4 @@
-#' @title Filter Dataset Using the Duration between Two Dates and Convert Duration to Calendar Units
+#' @title Filter Dataset by Date Duration
 #' @description Calculates the duration between two dates, use it as a filter to select rows that satisfy the length criteria.
 #' Returns the dataset with additional columns regarding the length of durations in different units.
 #' @usage

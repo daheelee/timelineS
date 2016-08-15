@@ -87,6 +87,6 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 Dahee Lee
 }
 \seealso{
-\code{\link{axis.Date}} \code{\link{timelineG}} \code{\link{durCalc}} \code{\link{durPlot}}
+\code{\link{axis.Date}}, \code{\link{timelineG}}, \code{\link{durCalc}}, \code{\link{durPlot}}
 }
 

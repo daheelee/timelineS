@@ -2,7 +2,7 @@
 % Please edit documentation in R/durCalc.R
 \name{durCalc}
 \alias{durCalc}
-\title{Filter Dataset Using the Duration between Two Dates and Convert Duration to Calendar Units}
+\title{Filter Dataset by Date Duration}
 \usage{
 durCalc(df=NULL, start, end, timeunit = "day", filterlength=NA, filterlonger=TRUE,
        year=365.25, month=30.42)
