@@ -22,15 +22,15 @@ devtools::install_github("daheelee/timelineS")
 Usage example
 -------------
 
--   #### timelineS
+### timelineS
 
-    `timelineS` plots an annotated timeline.
+`timelineS` plots an annotated timeline.
 
-    ``` sh
-    timelineS(mj_life, main = "Life of Michael Jackson")
-    ```
+``` sh
+timelineS(mj_life, main = "Life of Michael Jackson")
+```
 
-    ![](MJ.png)
+![](MJ.png)
 
 You can also change the aesthetics.
 
@@ -42,36 +42,36 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 
 ![](MJ2.png)
 
--   #### timelineG
+### timelineG
 
-    `timelineG` creates stacked timelines, faceted by groups.
+`timelineG` creates stacked timelines, faceted by groups.
 
-    ``` sh
-    timelineG(df=life_country, start="Start", end="End", names="Name", 
-    phase="Phase", group1="Country", group2="Gender")
-    ```
+``` sh
+timelineG(df=life_country, start="Start", end="End", names="Name", 
+phase="Phase", group1="Country", group2="Gender")
+```
 
-    ![](group.png)
+![](group.png)
 
--   #### durPlot
+### durPlot
 
-    `durPlot` function gives five different plots by default. You can set `facet=TRUE` to get faceted plots.
+`durPlot` function gives five different plots by default. You can set `facet=TRUE` to get faceted plots.
 
-    ``` sh
-    durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
-    ```
+``` sh
+durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
+```
 
-    ![](box.png)![](hist.png) ![](density.png)![](scatter.png) ![](line.png)
+![](box.png)![](hist.png) ![](density.png)![](scatter.png) ![](line.png)
 
 `durPlot` also gives a summary of the duration lengths with the plots.
 
--   #### durSummary
+### durSummary
 
-    `durSummary` is a simpler function if you only want the summary.
+`durSummary` is a simpler function if you only want the summary.
 
-    ``` sh
-    durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="years")
-    ```
+``` sh
+durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="years")
+```
 
 ``` sh
     Country   min   Qt1 median  mean   Qt3   max   sd
@@ -82,54 +82,54 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 5        US 62.73 72.04  76.21 75.35 79.00 85.45 5.49
 ```
 
--   #### durCalc
+### durCalc
 
-    `durCalc` filters a data frame using duration lengths. Let's say we have a dataset that has dates of birth and death of people. We can filter out people(rows) who lived longer than 85 years. You can also do `filterlonger=FALSE` to select rows that are shorter than some time length.
+`durCalc` filters a data frame using duration lengths. Let's say we have a dataset that has dates of birth and death of people. We can filter out people(rows) who lived longer than 85 years. You can also do `filterlonger=FALSE` to select rows that are shorter than some time length.
 
-    ``` sh
-    durCalc(life_exp, start="Birth", end="Death", timeunit="years", filterlength=85)
-    ```
+``` sh
+durCalc(life_exp, start="Birth", end="Death", timeunit="years", filterlength=85)
+```
 
-    The output has a few extra duration information in specified `timeunit` and also in calendar units.
+The output has a few extra duration information in specified `timeunit` and also in calendar units.
 
-    ``` sh
+``` sh
      Name   Country Gender      Birth      Death  days diff_years            diff_length             longer_by
-    8   Susan Australia Female 1920-05-26 2006-02-10 31306      85.71 85years 8months 16days        8months 16days
-    19    Mai     Japan Female 1923-10-12 2009-02-07 31165      85.33 85years 3months 27days        3months 27days
-    24    Leo    France   Male 1920-06-28 2009-11-09 32641      89.37 89years 4months 12days 4years 4months 12days
-    48 Gloria        US Female 1926-03-01 2011-08-14 31212      85.45 85years 5months 14days        5months 14days
-    60   Ming     China Female 1920-09-06 2008-03-31 31983      87.56 87years 6months 24days 2years 6months 24days
-    ```
+8   Susan Australia Female 1920-05-26 2006-02-10 31306      85.71 85years 8months 16days        8months 16days
+19    Mai     Japan Female 1923-10-12 2009-02-07 31165      85.33 85years 3months 27days        3months 27days
+24    Leo    France   Male 1920-06-28 2009-11-09 32641      89.37 89years 4months 12days 4years 4months 12days
+48 Gloria        US Female 1926-03-01 2011-08-14 31212      85.45 85years 5months 14days        5months 14days
+60   Ming     China Female 1920-09-06 2008-03-31 31983      87.56 87years 6months 24days 2years 6months 24days
+```
 
-    If you want to know how old each person would be as of January 1, 2000, you can do:
+If you want to know how old each person would be as of January 1, 2000, you can do:
 
-    ``` sh
-    durCalc(life_exp, start="Birth", end=as.Date("2000-1-1"), timeunit="years")
-    ```
+``` sh
+durCalc(life_exp, start="Birth", end=as.Date("2000-1-1"), timeunit="years")
+```
 
-    ``` sh
+``` sh
       Name   Country Gender      Birth      Death  days             diff_length
-    1    Edward Australia   Male 1927-11-17 1999-12-16 26343   72years 1month 15days
-    2     James Australia   Male 1925-11-20 1993-01-27 27070   74years 1month 11days
-    3      Mark Australia   Male 1926-06-11 2003-12-26 26867  73years 6months 21days
-    4      Fred Australia   Male 1927-01-22 2002-07-19 26642  72years 11months 9days
-    5      Phil Australia   Male 1923-06-20 2003-01-15 27954  76years 6months 12days
-    ...
-    ```
+1    Edward Australia   Male 1927-11-17 1999-12-16 26343   72years 1month 15days
+2     James Australia   Male 1925-11-20 1993-01-27 27070   74years 1month 11days
+3      Mark Australia   Male 1926-06-11 2003-12-26 26867  73years 6months 21days
+4      Fred Australia   Male 1927-01-22 2002-07-19 26642  72years 11months 9days
+5      Phil Australia   Male 1923-06-20 2003-01-15 27954  76years 6months 12days
+...
+```
 
-    Or you can simply use this as a unit-converter between two dates.
+Or you can simply use this as a unit-converter between two dates.
 
-    ``` sh
-    durCalc(start=as.Date("2010-12-1"), end=as.Date("2015-4-26"), timeunit="weeks")
-    ```
+``` sh
+durCalc(start=as.Date("2010-12-1"), end=as.Date("2015-4-26"), timeunit="weeks")
+```
 
-    ``` sh
-     days diff_weeks           diff_length
-    1 1607     229.57 4years 4months 24days
-    ```
+``` sh
+ days diff_weeks           diff_length
+1 1607     229.57 4years 4months 24days
+```
 
-    Release History
-    ---------------
+Release History
+---------------
 
 -   0.1.0
     -   First upload

@@ -29,7 +29,7 @@ devtools::install_github("daheelee/timelineS")
 
 ## Usage example
 
-* #### timelineS
+###timelineS
 `timelineS` plots an annotated timeline. 
 ```sh
 timelineS(mj_life, main = "Life of Michael Jackson")
@@ -44,7 +44,7 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 ```
 ![](MJ2.png)
 
-* #### timelineG
+###timelineG
 `timelineG` creates stacked timelines, faceted by groups.
 ```sh
 timelineG(df=life_country, start="Start", end="End", names="Name", 
@@ -52,7 +52,7 @@ phase="Phase", group1="Country", group2="Gender")
 ```
 ![](group.png)
 
-* #### durPlot
+###durPlot
 `durPlot` function gives five different plots by default. You can set `facet=TRUE` to get faceted plots.
 ```sh
 durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
@@ -63,7 +63,7 @@ durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years",
 
 `durPlot` also gives a summary of the duration lengths with the plots. 
 
-* #### durSummary
+###durSummary
 `durSummary` is a simpler function if you only want the summary.
 ```sh
 durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="years")
@@ -78,7 +78,7 @@ durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="year
 5        US 62.73 72.04  76.21 75.35 79.00 85.45 5.49
 ```
 
-* #### durCalc
+###durCalc
 `durCalc` filters a data frame using duration lengths. Let's say we have a dataset that has dates of birth and death of people.
 We can filter out people(rows) who lived longer than 85 years. You can also do `filterlonger=FALSE` to select rows that are shorter than some time length.
 ```sh
