@@ -30,7 +30,7 @@ Usage example
 timelineS(mj_life, main = "Life of Michael Jackson")
 ```
 
-![](MJ.png)
+![](README-MJ.png)
 
 You can also change the aesthetics.
 
@@ -40,7 +40,7 @@ label.direction = "up", label.length = c(0.2,0.8,0.4,1.2), label.position = 3,
 line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 ```
 
-![](MJ2.png)
+![](README-MJ2.png)
 
 ### timelineG
 
@@ -51,7 +51,7 @@ timelineG(df=life_country, start="Start", end="End", names="Name",
 phase="Phase", group1="Country", group2="Gender")
 ```
 
-![](group.png)
+![](README-group.png)
 
 ### durPlot
 
@@ -61,7 +61,7 @@ phase="Phase", group1="Country", group2="Gender")
 durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
 ```
 
-![](box.png)![](hist.png) ![](density.png)![](scatter.png) ![](line.png)
+![](README-box.png) ![](README-hist.png) ![](README-density.png) ![](README-scatter.png) ![](README-line.png)
 
 `durPlot` also gives a summary of the duration lengths with the plots.
 
