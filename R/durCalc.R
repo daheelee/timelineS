@@ -14,8 +14,10 @@
 #' @param month Number of days to use as a month. Default is 30.42.
 #' @details
 #' Additional columns returned with the filtered rows are: length of duration in days, in specified time unit, and in calendar units, and
-#' how much longer/shorter the durations are compared to filter length in calendar units. If no \code{filterlength} is provided, then returns all rows with
-#' length of duration in days and calendar units.
+#' how much longer/shorter the durations are compared to filter length in calendar units.
+#'
+#' If no \code{filterlength} is provided, then returns all rows with length of duration in days and calendar units.
+#'
 #' You can use dates for \code{start} and \code{end} and provide no \code{df} to get the length of duration between the dates in calendar units. See example.
 #' @return A subset of original data frame with additional columns in specified time units and calendar units.
 #' @seealso \code{\link{durPlot}}, \code{\link{durSummary}}

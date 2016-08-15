@@ -1,4 +1,4 @@
-#' @title Data for timelineR
+#' @title Data for timelineS function in timelineS package
 #' @description Events and dates of Michael Jackson's life
 #' @name mj_life
 #' @docType data
