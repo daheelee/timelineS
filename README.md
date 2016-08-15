@@ -30,7 +30,7 @@ Usage example
     timelineS(mj_life, main = "Life of Michael Jackson")
     ```
 
-    ![](/Users/Dahee/Desktop/VPAL/timelineS/MJ.png)
+    ![](MJ.png)
 
 You can also change the aesthetics.
 
@@ -40,7 +40,7 @@ label.direction = "up", label.length = c(0.2,0.8,0.4,1.2), label.position = 3,
 line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 ```
 
-![](/Users/Dahee/Desktop/VPAL/timelineS/MJ2.png)
+![](MJ2.png)
 
 -   #### timelineG
 
@@ -51,7 +51,7 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
     phase="Phase", group1="Country", group2="Gender")
     ```
 
-    ![](/Users/Dahee/Desktop/VPAL/timelineS/group.png)
+    ![](group.png)
 
 -   #### durPlot
 
@@ -61,7 +61,7 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
     durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
     ```
 
-    ![](/Users/Dahee/Desktop/VPAL/timelineS/box.png)![](/Users/Dahee/Desktop/VPAL/timelineS/hist.png) ![](/Users/Dahee/Desktop/VPAL/timelineS/density.png)![](/Users/Dahee/Desktop/VPAL/timelineS/scatter.png) ![](/Users/Dahee/Desktop/VPAL/timelineS/line.png)
+    ![](box.png)![](hist.png) ![](density.png)![](scatter.png) ![](line.png)
 
 `durPlot` also gives a summary of the duration lengths with the plots.
 
