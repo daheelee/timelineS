@@ -1,8 +1,8 @@
 Package: timelineS
 Type: Package
 Title: Timeline and Time Duration-Related Tools
-Version: 0.1.0
-Date: 2016-08-15
+Version: 0.1.1
+Date: 2016-08-21
 Author: Dahee Lee [aut, cre], Dustin Tingley [aut]
 Maintainer: Dahee Lee <dhlee99@gmail.com>
 Description: An easy tool for plotting annotated timelines, grouped timelines, and exploratory graphics (boxplot/histogram/density plot/scatter plot/line plot). Filter, summarize date data by duration and convert to calendar units.
