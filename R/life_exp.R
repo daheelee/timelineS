@@ -1,4 +1,4 @@
-#' @title Data for functions in timelineS package
+#' @title Data for examples in timelineS package
 #' @description Dates of birth and death, country, gender and names
 #' @name life_exp
 #' @docType data

@@ -1,4 +1,4 @@
-#' @title Data for timelineGroup function in timelineS package
+#' @title Data for timelineGroup function example in timelineS package
 #' @description Dates of birth and death, gender and phases
 #' @name life_country
 #' @docType data

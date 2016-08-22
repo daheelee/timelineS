@@ -4,8 +4,8 @@
 \alias{durCalc}
 \title{Filter Dataset by Date Duration}
 \usage{
-durCalc(df=NULL, start, end, timeunit = "day", filterlength=NA, filterlonger=TRUE,
-       year=365.25, month=30.42)
+durCalc(df = NULL, start, end, timeunit = "day", filterlength = NA,
+       filterlonger = TRUE, year = 365.25, month = 30.42)
 }
 \arguments{
 \item{df}{Data frame containing start and end dates.}
@@ -14,7 +14,7 @@ durCalc(df=NULL, start, end, timeunit = "day", filterlength=NA, filterlonger=TRU
 
 \item{end}{Column in df for end dates or a date to use as a end date.}
 
-\item{timeunit}{Unit of time to be used in plots. \code{"day(s)","week(s)","month(s)","quarter(s)","semiannual", "halfyear", "half-year", "semi-annual", "year(s)"}}
+\item{timeunit}{Unit of time to be used in plots. \code{"day(s)"}, \code{"week(s)"}, \code{"month(s)"}, \code{"quarter(s)"}, \code{"semiannual"}, \code{"halfyear"},or \code{"year(s)"}.}
 
 \item{filterlength}{A time length to use as filter.}
 
@@ -40,9 +40,14 @@ If no \code{filterlength} is provided, then returns all rows with length of dura
 You can use dates for \code{start} and \code{end} and provide no \code{df} to get the length of duration between the dates in calendar units. See example.
 }
 \examples{
-durCalc(life_exp, start="Birth", end="Death", timeunit="years", filterlength=85)
-durCalc(life_exp, start="Birth", end=as.Date("2000-1-1"), timeunit="years")
-durCalc(start=as.Date("2010-12-1"), end=as.Date("2015-4-26"), timeunit="weeks")
+### Filter people who lived longer than 85 years
+durCalc(life_exp, start = "Birth", end = "Death", timeunit = "years", filterlength = 85)
+
+### How old each person would be as of January 1, 2000 if they were alive
+durCalc(life_exp, start = "Birth", end = as.Date("2000-1-1"), timeunit = "years")
+
+### Use as unit-converter between two dates
+durCalc(start = as.Date("2010-12-1"), end = as.Date("2015-4-26"), timeunit = "weeks")
 }
 \author{
 Dahee Lee

@@ -45,10 +45,14 @@
 #'
 #' The positions for \code{label.position} are 1: below 2: left 3: above 4: right.
 #' @examples
-#' timelineS(mj_life)
+#' ### Default down-up labels
+#' timelineS(mj_life, main = "Life of Michael Jackson")
+#'
+#' ### Labels above timeline and other change in aesthetics
 #' timelineS(mj_life, main = "Life of Michael Jackson",
 #' label.direction = "up", label.length = c(0.2,0.8,0.4,1.2), label.position = 3,
 #' line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
+#'
 #' @author Dahee Lee
 #' @seealso \code{\link{axis.Date}}, \code{\link{timelineG}}, \code{\link{durCalc}}, \code{\link{durPlot}}
 #' @import graphics
@@ -69,7 +73,7 @@ timelineS <- function(df, main = NA, xlab = NA, buffer.days = 600,
   }
 
   # Remove NA rows
-  df <- df[rowSums(is.na(df))==0,]
+  df <- df[rowSums(is.na(df)) == 0,]
   event.names <- df[[1]]
   event.dates <- df[[2]]
 
@@ -93,33 +97,33 @@ timelineS <- function(df, main = NA, xlab = NA, buffer.days = 600,
   }
 
   # Make line, points and segments
-  range.events <- range(min(event.dates)-buffer.days, max(event.dates)+buffer.days)
+  range.events <- range(min(event.dates) - buffer.days, max(event.dates) + buffer.days)
   r1 <- range.events[1]
   r2 <- range.events[2]
-  plot(NA, ylim=c(-1,1), xlim=range.events, ann=FALSE, axes=FALSE)
-  title(main=main, xlab=xlab)
-  points <- rep_len(d*label.length, length.out=nrow(df))
-  events <- rep_len(label.position, length.out=nrow(df))
-  segments(event.dates, h, event.dates, points+h, col=label.color)
+  plot(NA, ylim = c(-1,1), xlim = range.events, ann = FALSE, axes = FALSE)
+  title(main = main, xlab = xlab)
+  points <- rep_len(d * label.length, length.out = nrow(df))
+  events <- rep_len(label.position, length.out = nrow(df))
+  segments(event.dates, h, event.dates, points + h, col = label.color)
 
   # Add Scale
   axis.Date(
-    ifelse(scale.above==TRUE, 3, 1),
-    at=seq(as.Date(paste0(lubridate::year(r1),"-",lubridate::month(r1),"-",1)),
-           as.Date(paste0(lubridate::year(r2),"-",lubridate::month(r2)+1,"-",1)), by=scale),
-    format=scale.format,
-    cex.axis=scale.cex,
-    pos=h,
-    lwd.tick=scale.tickwidth,
-    col=line.color,
-    font=scale.font,
-    las=scale.orient)
+    ifelse(scale.above == TRUE, 3, 1),
+    at = seq(as.Date(paste0(lubridate::year(r1), "-", lubridate::month(r1), "-", 1)),
+             as.Date(paste0(lubridate::year(r2), "-", lubridate::month(r2)+1,"-", 1)), by=scale),
+    format = scale.format,
+    cex.axis = scale.cex,
+    pos = h,
+    lwd.tick = scale.tickwidth,
+    col = line.color,
+    font = scale.font,
+    las = scale.orient)
 
-  abline(h=h, lwd=line.width, col=line.color)
+  abline(h = h, lwd = line.width, col = line.color)
 
   # Add Event Labels
-  points(x=event.dates, y=points+h, pch=pch, cex=point.cex, col=point.color)
-  text(x=event.dates, y=points+h, labels=labels, cex=label.cex, pos=events, font = label.font, srt = label.angle)
+  points(x = event.dates, y = points+h, pch = pch, cex = point.cex, col = point.color)
+  text(x = event.dates, y = points+h, labels = labels, cex = label.cex, pos = events, font = label.font, srt = label.angle)
 }
 
 

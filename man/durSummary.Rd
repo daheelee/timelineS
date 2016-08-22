@@ -4,7 +4,7 @@
 \alias{durSummary}
 \title{Summary for Date Duration Data}
 \usage{
-durSummary(df, start, end, group=NA, timeunit="days")
+durSummary(df, start, end, group = NA, timeunit = "days")
 }
 \arguments{
 \item{df}{Data frame containing start and end dates.}
@@ -15,7 +15,7 @@ durSummary(df, start, end, group=NA, timeunit="days")
 
 \item{group}{Column in df for groups. Default NA.}
 
-\item{timeunit}{Unit of time to be used in plots. \code{"day(s)","week(s)","month(s)","quarter(s)","semiannual", "halfyear", "half-year", "semi-annual", "year(s)"}}
+\item{timeunit}{Unit of time to be used in plots. \code{"day(s)"}, \code{"week(s)"}, \code{"month(s)"}, \code{"quarter(s)"}, \code{"semiannual"}, \code{"halfyear"},or \code{"year(s)"}.}
 }
 \description{
 Returns summary statistics for date duration data (for each group if \code{group} is provided)
@@ -24,7 +24,7 @@ Returns summary statistics for date duration data (for each group if \code{group
 1 year = 365.25 days, 1 month = 30.42 days, 1 year = 52.14 weeks
 }
 \examples{
-durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="years")
+durSummary(life_exp, start = "Birth", end = "Death", group = "Country", timeunit = "years")
 }
 \author{
 Dahee Lee

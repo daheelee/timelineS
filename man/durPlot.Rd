@@ -4,12 +4,13 @@
 \alias{durPlot}
 \title{Graphs and Summary for Date Durations}
 \usage{
-durPlot(df, start, end, group=NA, timeunit="days", plot_type="all",
-       facet=FALSE, facet.nrow=NULL, theme=NULL, other=NULL,
-       fill_color="black", line_color="black", groupcolor=TRUE,
-       point_size=2, alpha=NA, binwidth=0.5, show_legend=TRUE,
-       title=FALSE, title_boxplot="Boxplot", title_histogram="Histogram",
-       title_density="Density Plot", title_scatter="Scatter Plot", title_line="Line Plot")
+durPlot(df, start, end, group = NA, timeunit = "days", plot_type = "all",
+       facet = FALSE, facet.nrow = NULL, theme = NULL, other = NULL,
+       fill_color = "black", line_color = "black", groupcolor = TRUE,
+       point_size = 2, alpha = NA, binwidth = 0.5, show_legend = TRUE,
+       title=FALSE, title_boxplot = "Boxplot", title_histogram = "Histogram",
+       title_density = "Density Plot", title_scatter = "Scatter Plot",
+       title_line = "Line Plot")
 }
 \arguments{
 \item{df}{Data frame containing start dates, end dates and groups.}
@@ -20,8 +21,7 @@ durPlot(df, start, end, group=NA, timeunit="days", plot_type="all",
 
 \item{group}{Column in df for groups. Default is NA.}
 
-\item{timeunit}{Unit of time to be used in plots.
-\code{"day(s)","week(s)","month(s)","quarter(s)","semiannual", "halfyear", "half-year", "semi-annual", "year(s)"}. Default is \code{"days"}.}
+\item{timeunit}{Unit of time to be used in plots. \code{"day(s)"}, \code{"week(s)"}, \code{"month(s)"}, \code{"quarter(s)"}, \code{"semiannual"}, \code{"halfyear"},or \code{"year(s)"}.}
 
 \item{plot_type}{One of \code{"all", "boxplot", "histogram", "density", "scatter", "line"}. Default is \code{"all"}.}
 
@@ -66,10 +66,11 @@ Plots boxplot, histogram, density plot, scatter plot, line plot and prints summa
 The function also returns summary statistics for the specified date duration.
 }
 \examples{
-durPlot(life_exp, start="Birth", end="Death", group="Country",
-timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
-durPlot(life_exp, start="Birth", end="Death", group="Country",
-timeunit="years",alpha=0.5, title=TRUE)
+durPlot(life_exp, start = "Birth", end = "Death", group = "Country",
+timeunit = "years", facet = TRUE, binwidth = 3, alpha = 0.7, title = TRUE)
+
+durPlot(life_exp, start = "Birth", end = "Death", group = "Country",
+timeunit = "years",alpha = 0.5, title = TRUE)
 }
 \author{
 Dahee Lee

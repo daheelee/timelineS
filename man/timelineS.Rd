@@ -78,10 +78,14 @@ repeats the sequence of lengths.
 The positions for \code{label.position} are 1: below 2: left 3: above 4: right.
 }
 \examples{
-timelineS(mj_life)
+### Default down-up labels
+timelineS(mj_life, main = "Life of Michael Jackson")
+
+### Labels above timeline and other change in aesthetics
 timelineS(mj_life, main = "Life of Michael Jackson",
 label.direction = "up", label.length = c(0.2,0.8,0.4,1.2), label.position = 3,
 line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
+
 }
 \author{
 Dahee Lee

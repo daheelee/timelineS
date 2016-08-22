@@ -4,6 +4,8 @@ timelineS
 
 > An easy tool for visualizing, annotating, and stratifying time series data.
 
+[![CRAN Status Badge](http://www.r-pkg.org/badges/version/timelineS)](http://cran.r-project.org/package=timelineS) [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/timelineS)](https://cran.r-project.org/package=timelineS) [![CRAN Total downloads](http://cranlogs.r-pkg.org/badges/grand-total/timelineS)](http://cran.r-project.org/package=timelineS)
+
 This package contains five functions as below.
 
 -   `timelineS`: Plots a horizontal timeline with event descriptions at corresponding dates.
@@ -12,10 +14,18 @@ This package contains five functions as below.
 -   `durCalc`: Calculates the duration between two dates, use it as a filter to select rows that satisfy the length criteria. Returns the dataset with additional columns regarding the length of durations in different units.
 -   `durSummary`: Returns summary statistics for date duration data.
 
-Installing the latest version
------------------------------
+Install
+-------
 
-``` sh
+-   from [CRAN](https://cran.r-project.org/package=timelineS):
+
+``` r
+install.packages("timelineS")
+```
+
+-   latest version on [GitHub](https://github.com/daheelee/timelineS):
+
+``` r
 devtools::install_github("daheelee/timelineS")
 ```
 
@@ -26,7 +36,7 @@ Usage example
 
 `timelineS` plots an annotated timeline.
 
-``` sh
+``` r
 timelineS(mj_life, main = "Life of Michael Jackson")
 ```
 
@@ -34,7 +44,7 @@ timelineS(mj_life, main = "Life of Michael Jackson")
 
 You can also change the aesthetics.
 
-``` sh
+``` r
 timelineS(mj_life, main = "Life of Michael Jackson", 
 label.direction = "up", label.length = c(0.2,0.8,0.4,1.2), label.position = 3, 
 line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
@@ -46,7 +56,7 @@ line.color = "blue", label.color = "blue", point.color = "blue", pch = "-")
 
 `timelineG` creates stacked timelines, faceted by groups.
 
-``` sh
+``` r
 timelineG(df=life_country, start="Start", end="End", names="Name", 
 phase="Phase", group1="Country", group2="Gender")
 ```
@@ -57,7 +67,7 @@ phase="Phase", group1="Country", group2="Gender")
 
 `durPlot` function gives five different plots by default. You can set `facet=TRUE` to get faceted plots.
 
-``` sh
+``` r
 durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years", facet=TRUE, binwidth=3, alpha=0.7, title=TRUE)
 ```
 
@@ -69,11 +79,11 @@ durPlot(life_exp, start="Birth", end="Death", group="Country", timeunit="years",
 
 `durSummary` is a simpler function if you only want the summary.
 
-``` sh
+``` r
 durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="years")
 ```
 
-``` sh
+``` r
     Country   min   Qt1 median  mean   Qt3   max   sd
 1 Australia 67.19 72.16  76.26 75.72 78.98 85.71 5.30
 2     China 67.41 70.09  76.06 76.44 83.38 87.56 7.14
@@ -86,13 +96,13 @@ durSummary(life_exp, start="Birth", end="Death", group="Country", timeunit="year
 
 `durCalc` filters a data frame using duration lengths. Let's say we have a dataset that has dates of birth and death of people. We can filter out people(rows) who lived longer than 85 years. You can also do `filterlonger=FALSE` to select rows that are shorter than some time length.
 
-``` sh
+``` r
 durCalc(life_exp, start="Birth", end="Death", timeunit="years", filterlength=85)
 ```
 
 The output has a few extra duration information in specified `timeunit` and also in calendar units.
 
-``` sh
+``` r
      Name   Country Gender      Birth      Death  days diff_years            diff_length             longer_by
 8   Susan Australia Female 1920-05-26 2006-02-10 31306      85.71 85years 8months 16days        8months 16days
 19    Mai     Japan Female 1923-10-12 2009-02-07 31165      85.33 85years 3months 27days        3months 27days
@@ -103,11 +113,11 @@ The output has a few extra duration information in specified `timeunit` and also
 
 If you want to know how old each person would be as of January 1, 2000, you can do:
 
-``` sh
+``` r
 durCalc(life_exp, start="Birth", end=as.Date("2000-1-1"), timeunit="years")
 ```
 
-``` sh
+``` r
       Name   Country Gender      Birth      Death  days             diff_length
 1    Edward Australia   Male 1927-11-17 1999-12-16 26343   72years 1month 15days
 2     James Australia   Male 1925-11-20 1993-01-27 27070   74years 1month 11days
@@ -119,11 +129,11 @@ durCalc(life_exp, start="Birth", end=as.Date("2000-1-1"), timeunit="years")
 
 Or you can simply use this as a unit-converter between two dates.
 
-``` sh
+``` r
 durCalc(start=as.Date("2010-12-1"), end=as.Date("2015-4-26"), timeunit="weeks")
 ```
 
-``` sh
+``` r
  days diff_weeks           diff_length
 1 1607     229.57 4years 4months 24days
 ```

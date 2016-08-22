@@ -3,7 +3,7 @@
 \docType{data}
 \name{life_exp}
 \alias{life_exp}
-\title{Data for functions in timelineS package}
+\title{Data for examples in timelineS package}
 \format{dataframe of name(character), country(character), gender(character), and dates(date)}
 \description{
 Dates of birth and death, country, gender and names

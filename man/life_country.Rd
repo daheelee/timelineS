@@ -3,7 +3,7 @@
 \docType{data}
 \name{life_country}
 \alias{life_country}
-\title{Data for timelineGroup function in timelineS package}
+\title{Data for timelineGroup function example in timelineS package}
 \format{dataframe of name(character), country(character), gender(character), phase(character) and dates(date)}
 \description{
 Dates of birth and death, gender and phases

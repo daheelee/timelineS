@@ -4,8 +4,8 @@
 \alias{timelineG}
 \title{Faceted Timelines for Grouped Data}
 \usage{
-timelineG(df, start, end, names, phase=NA, group1=NA, group2=NA,
-             width=2, color="grey", theme=NULL, other=NULL)
+timelineG(df, start, end, names, phase = NA, group1 = NA, group2 = NA,
+          width = 2, color = "grey", theme = NULL, other = NULL)
 }
 \arguments{
 \item{df}{Data frame containing start dates, end dates, groups, phases, and names for each timeline.}
@@ -34,10 +34,17 @@ timelineG(df, start, end, names, phase=NA, group1=NA, group2=NA,
 Plots faceted timelines for grouped data.
 }
 \examples{
-timelineG(df=life_country, start="Start", end="End", names="Name", phase="Phase", group1="Country")
-timelineG(df=life_country, start="Start", end="End", names="Name", phase="Phase",
-group1="Country", group2="Gender")
-timelineG(df=life_country, start="Start", end="End", names="Name",color="grey")
+### Plot timelines row-grouped by "Country"
+timelineG(df = life_country, start = "Start", end = "End", names = "Name",
+phase = "Phase", group1 = "Country")
+
+### Plot timelines row-grouped by "Country" and column-grouped by "Gender"
+timelineG(df = life_country, start = "Start", end = "End", names = "Name",
+phase = "Phase", group1 = "Country", group2 = "Gender")
+
+ ### Plot timelines, no group
+timelineG(df = life_country, start = "Start", end = "End", names = "Name",color = "grey")
+
 }
 \author{
 Dahee Lee

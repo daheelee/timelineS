@@ -3,7 +3,7 @@
 \docType{data}
 \name{mj_life}
 \alias{mj_life}
-\title{Data for timelineS function in timelineS package}
+\title{Data for timelineS function example in timelineS package}
 \format{dataframe of events(character) and dates(date)}
 \description{
 Events and dates of Michael Jackson's life
