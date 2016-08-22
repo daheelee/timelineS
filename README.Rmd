@@ -28,7 +28,7 @@ This package contains five functions as below.
 ## Install
 - from [CRAN](https://cran.r-project.org/package=timelineS):
 
-```r
+```{r, eval=FALSE}
 install.packages("timelineS")
 ```
 
@@ -110,6 +110,7 @@ If you want to know how old each person would be as of January 1, 2000, you can 
 ```{r, eval=FALSE}
 durCalc(life_exp, start="Birth", end=as.Date("2000-1-1"), timeunit="years")
 ```
+
 ```{r, eval=FALSE}
       Name   Country Gender      Birth      Death  days             diff_length
 1    Edward Australia   Male 1927-11-17 1999-12-16 26343   72years 1month 15days
