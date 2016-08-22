@@ -1,7 +1,7 @@
 Package: timelineS
 Type: Package
 Title: Timeline and Time Duration-Related Tools
-Version: 0.1.0
+Version: 0.1.1
 Date: 2016-08-15
 Author: Dahee Lee [aut, cre], Dustin Tingley [aut]
 Maintainer: Dahee Lee <dhlee99@gmail.com>
