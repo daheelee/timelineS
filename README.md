@@ -4,7 +4,7 @@ timelineS
 
 > An easy tool for visualizing, annotating, and stratifying time series data.
 
-[![Travis-CI Build Status](https://travis-ci.org/daheelee/timelineS.svg?branch=master)](https://travis-ci.org/daheelee/timelineS) [![CRAN Status Badge](http://www.r-pkg.org/badges/version/timelineS)](http://cran.r-project.org/package=timelineS) [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/timelineS)](https://cran.r-project.org/package=timelineS) [![CRAN Total downloads](http://cranlogs.r-pkg.org/badges/grand-total/timelineS)](http://cran.r-project.org/package=timelineS)
+[![CRAN Status Badge](http://www.r-pkg.org/badges/version/timelineS)](http://cran.r-project.org/package=timelineS) [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/timelineS)](https://cran.r-project.org/package=timelineS) [![CRAN Total downloads](http://cranlogs.r-pkg.org/badges/grand-total/timelineS)](http://cran.r-project.org/package=timelineS)
 
 This package contains five functions as below.
 
